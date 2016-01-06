@@ -1,0 +1,24 @@
+header .navbar{
+	background: #282828;
+	color: #fff;
+	overflow: visible;
+
+}
+
+header .jumbotron{
+	background: #484848;
+	color: #fff;
+}
+
+.dropdown button{
+	background: #282828;
+	color: #fff;
+	margin-top: 11px;
+	overflow: visible;
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+#navbar-collapse{
+	overflow: visible;
+}
