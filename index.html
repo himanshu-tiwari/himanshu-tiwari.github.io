@@ -2,85 +2,151 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<title>Shivam Enterprises</title>
-	<meta name="description" content="shivamEnterprises">
+    <meta charset="utf-8">
+    <title>Shivam Enterprises</title>
+    <meta name="description" content="shivamEnterprises">
 
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
-	<!-- Custom CSS -->
-	<link rel="stylesheet" type="text/css" href="style.css">
-	
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
 </head>
 
-	
+    
 
 <body>
-	<header>
-		<!--Navbar-->
-		<nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
-			<div class="container">
-				<!--Navbar Header-->
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
+    <header id="home">
+        <!--Navbar-->
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
+            <div class="container">
+                <!--Navbar Header-->
+                <div class="navbar-header col-md-4">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
 
-					<a href="#" class="navbar-brand">Shivam Enterprises logo</a>
-				</div>
-				
-				<div class="collapse navbar-collapse pull-right container" id="navbar-collapse">
-					<ul class="nav navbar-nav">
-						<li><a href="#home">Home</a></li>
-						<li>
-						  <div class="dropdown">
-						    <button class="nav navbar-nav dropdown-toggle" data-toggle="dropdown">
-						    	Services <span class="caret"></span>
-						    </button>
-						    <ul class="dropdown-menu">
-							     <li class="dropdown-header"></li>
-							     <li><a href="#Home">1</a></li>
-							     <li><a href="#Home">2</a></li>
-							     <li class="divider"></li>
-							     <li><a href="#Home">3</a></li>
-							     <li><a href="#Home">4</a></li>
-						    </ul> 
-						  </div>  
-						</li>
-						<li><a href="#about">About Us</a></li>
-					</ul>
-				</div>
-				<!--Navbar Header End-->
-			</div>
-			<!--End Container-->
-		</nav>
-		<!--Navbar End-->
+                    <a href="#" class="navbar-brand">
+                        <img src="images/shivam-logo.png" alt="Company Logo">
+                    </a>
+                </div>
+                
+                <div class="collapse navbar-collapse pull-right container" id="navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="{{ url('/login') }}">Login</a></li>
+                        <li><a href="{{ url('/register') }}">Register</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li class="dropdown">
+                          <a href="#" class="nav navbar-nav dropdown-toggle" data-toggle="dropdown">
+                              Services <span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu">
+                               <li class="dropdown-header"></li>
+                               <li><a href="#services">1</a></li>
+                               <li class="divider"></li>
+                               <li><a href="#services">2</a></li>
+                               <li class="divider"></li>
+                               <li><a href="#services">3</a></li>
+                               <li class="divider"></li>
+                               <li><a href="#services">4</a></li>
+                               <li class="divider"></li>
+                               <li><a href="#services">5</a></li>
+                               <li class="divider"></li>
+                               <li><a href="#services">6</a></li>
+                          </ul>  
+                        </li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                <!--Navbar Header End-->
+            </div>
+            <!--End Container-->
+        </nav>
+        <!--Navbar End-->
+    </header>  
 
-		<!--Jumbotron-->
+    <!--Jumbotron-->
+    <div class="jumbotron">
+        <div class="container text-center">
+            <h1>Shivam Enterprises</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eleifend efficitur dictum
+            </p>
+        </div>
+    </div>
+    <!--Jumbotron End-->        
 
-		<div class="jumbotron">
-			<div class="container text-center">
-				<h1>Shivam Enterprises</h1>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eleifend efficitur dictum
-				</p>
-			</div>
-		</div>
-		<!--Jumbotron End-->		
-	</header>
-	
-	<!-- JQuery -->
+    <!--Container-->
+    <div class="services">
+        <div class="container" id="services">
+            <section>
+                <div class="page-header col-md-12">
+                    <h2>Services <small>Check out a few of the awesome services provided by us.</small> </h2>
+                </div>
 
-	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+                <div class="carousel slide" id="screenshot-carousel" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#screenshot-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#screenshot-carousel" data-slide-to="1"></li>
+                        <li data-target="#screenshot-carousel" data-slide-to="2"></li>
+                        <li data-target="#screenshot-carousel" data-slide-to="3"></li>
+                        <li data-target="#screenshot-carousel" data-slide-to="4"></li>
+                        <li data-target="#screenshot-carousel" data-slide-to="5"></li>
+                    </ol>
 
-	<!-- Latest compiled and minified JavaScript --><script src="js/bootstrap.min.js"></script>﻿
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="images/himanshu2.png" alt="Image 1">
+                        </div>
+                        <div class="item">
+                            <img src="images/mainsh2.png" alt="Image 2">
+                        </div>
+                        <div class="item">
+                            <img src="images/himanshu2.png" alt="Image 3">
+                        </div>
+                        <div class="item">
+                            <img src="images/mainsh2.png" alt="Image 4">
+                        </div>
+                        <div class="item">
+                            <img src="images/himanshu2.png" alt="Image 3">
+                        </div>
+                        <div class="item">
+                            <img src="images/mainsh2.png" alt="Image 4">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!--End Container-->
 
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>  
-</body>	
+    <!--Container-->
+    <div class="about">
+        <div class="container" id="about">
+            <section>
+                <div class="page-header col-md-12">
+                    <h2>About Us <small>This is the about section.</small> </h2>
+                </div>
+                <div class="container text-center">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim sed nulla eget tempus. Nullam dictum sed lacus id ornare. Maecenas est sapien, tristique eu turpis sit amet, malesuada feugiat sem. Pellentesque non nisl nibh. Ut justo elit, facilisis vitae interdum a, imperdiet eu tortor. Vivamus at semper purus, vel semper sem. Morbi sed sapien nec sem dignissim sagittis sit amet ac magna. Donec ultrices arcu at consequat efficitur. Duis elementum ipsum in odio lacinia imperdiet. Vestibulum nec metus fringilla, vestibulum eros eu, blandit nisi. Etiam non odio ac enim dignissim semper. Vestibulum sit amet efficitur metus. Etiam facilisis odio ac arcu pulvinar euismod. Nam nunc dolor, ullamcorper ac auctor id, pulvinar vel neque. Praesent diam ex, ultricies varius leo eu, aliquet tincidunt massa. Pellentesque pulvinar vehicula urna eget egestas. 
+                    </p>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!--End Container-->
+
+    <!-- JQuery -->
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript --><script src="js/bootstrap.min.js"></script>﻿
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>  
+</body> 
 </html>
