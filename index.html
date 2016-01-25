@@ -20,10 +20,10 @@
 
     
 
-<body>
+<body data-spy="scroll">
     <header id="home">
         <!--Navbar-->
-        <nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar" role="navigation">
             <div class="container">
                 <!--Navbar Header-->
                 <div class="navbar-header col-md-4">
@@ -33,15 +33,15 @@
                         <span class="icon-bar"></span>
                     </button>
 
-                    <a href="#" class="navbar-brand">
-                        <img src="images/shivam-logo.png" alt="Company Logo">
+                    <a href="#home" class="navbar-brand page-scroll">
+                        <img class="img-responsive" src="images/shivam-logo.png" alt="Company Logo">
                     </a>
                 </div>
                 
                 <div class="collapse navbar-collapse pull-right container" id="navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="{{ url('/login') }}">Login</a></li>
-                        <li><a href="{{ url('/register') }}">Register</a></li>
+                            <li><a href="{{ url('/login') }}">Login</a></li>
+                            <li><a href="{{ url('/register') }}">Register</a></li>
                         <li><a href="#home">Home</a></li>
                         <li class="dropdown">
                           <a href="#" class="nav navbar-nav dropdown-toggle" data-toggle="dropdown">
@@ -49,17 +49,21 @@
                           </a>
                           <ul class="dropdown-menu">
                                <li class="dropdown-header"></li>
-                               <li><a href="#services">1</a></li>
+                               <li><a href="#services">Offset Printing</a></li>
                                <li class="divider"></li>
-                               <li><a href="#services">2</a></li>
+                               <li><a href="#services">Graphic Designing</a></li>
                                <li class="divider"></li>
-                               <li><a href="#services">3</a></li>
+                               <li><a href="#services">Digital Printing</a></li>
                                <li class="divider"></li>
-                               <li><a href="#services">4</a></li>
+                               <li><a href="#services">Business Cards</a></li>
                                <li class="divider"></li>
-                               <li><a href="#services">5</a></li>
+                               <li><a href="#services">Posters</a></li>
                                <li class="divider"></li>
-                               <li><a href="#services">6</a></li>
+                               <li><a href="#services">Flex</a></li>
+                               <li class="divider"></li>
+                               <li><a href="#services">Spot UV</a></li>
+                               <li class="divider"></li>
+                               <li><a href="#services">Lamination and Binding</a></li>
                           </ul>  
                         </li>
                         <li><a href="#about">About Us</a></li>
@@ -70,7 +74,7 @@
             <!--End Container-->
         </nav>
         <!--Navbar End-->
-    </header>  
+    </header>    
 
     <!--Jumbotron-->
     <div class="jumbotron">
@@ -99,6 +103,8 @@
                         <li data-target="#screenshot-carousel" data-slide-to="3"></li>
                         <li data-target="#screenshot-carousel" data-slide-to="4"></li>
                         <li data-target="#screenshot-carousel" data-slide-to="5"></li>
+                        <li data-target="#screenshot-carousel" data-slide-to="6"></li>
+                        <li data-target="#screenshot-carousel" data-slide-to="7"></li>
                     </ol>
 
                     <div class="carousel-inner">
@@ -115,10 +121,16 @@
                             <img src="images/mainsh2.png" alt="Image 4">
                         </div>
                         <div class="item">
-                            <img src="images/himanshu2.png" alt="Image 3">
+                            <img src="images/himanshu2.png" alt="Image 5">
                         </div>
                         <div class="item">
-                            <img src="images/mainsh2.png" alt="Image 4">
+                            <img src="images/mainsh2.png" alt="Image 6">
+                        </div>
+                        <div class="item">
+                            <img src="images/himanshu2.png" alt="Image 7">
+                        </div>
+                        <div class="item">
+                            <img src="images/mainsh2.png" alt="Image 8">
                         </div>
                     </div>
                 </div>
