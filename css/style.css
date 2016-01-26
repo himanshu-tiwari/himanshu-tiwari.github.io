@@ -14,8 +14,7 @@ header .navbar{
 }
 
 .navbar-brand{
-	max-width: 100%;
-	max-height: 100%;
+
 	margin-bottom: 0;
 	display: inline;
 	float: left;
@@ -26,8 +25,8 @@ header .navbar{
 }
 
 .navbar-brand img{
-	max-width: 100%;
-	max-height: 100%;
+	max-width: 140px;
+	max-height: 140px;
 	display: inline;
 	float: left;
 }
@@ -66,4 +65,12 @@ header .navbar{
 	border: 0px;
 	padding: 0;
 	background: #484848;
+}
+
+.login{
+	transform: translate(0, 50px);
+}
+
+.register{
+	transform: translate(0, 50px);
 }

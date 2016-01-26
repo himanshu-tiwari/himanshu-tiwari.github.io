@@ -19,12 +19,11 @@
 </head>
 
     
-
 <body data-spy="scroll">
     <header id="home">
         <!--Navbar-->
-        <nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar" role="navigation">
-            <div class="container">
+        <nav class="navbar navbar-inverse navbar-fixed-top navbar-responsive" id="my-navbar" role="navigation">
+            <div class="container-fluid">
                 <!--Navbar Header-->
                 <div class="navbar-header col-md-4">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
@@ -40,8 +39,20 @@
                 
                 <div class="collapse navbar-collapse pull-right container" id="navbar-collapse">
                     <ul class="nav navbar-nav">
+                        @if (Auth::guest())
                             <li><a href="{{ url('/login') }}">Login</a></li>
                             <li><a href="{{ url('/register') }}">Register</a></li>
+                        @else
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                                </ul>
+                            </li>
+                        @endif
                         <li><a href="#home">Home</a></li>
                         <li class="dropdown">
                           <a href="#" class="nav navbar-nav dropdown-toggle" data-toggle="dropdown">
@@ -49,7 +60,14 @@
                           </a>
                           <ul class="dropdown-menu">
                                <li class="dropdown-header"></li>
-                               <li><a href="#services">Offset Printing</a></li>
+                               <li>
+                                <a href="#services">Offset Printing</a>
+                                <div class="description" style="color:#000">Your First Description</div>
+                               </li>
+                               <div>
+  <a>Your First link</a>
+  <div class="description" style="color:#000">Your First Description</div>
+</div>
                                <li class="divider"></li>
                                <li><a href="#services">Graphic Designing</a></li>
                                <li class="divider"></li>
@@ -74,8 +92,7 @@
             <!--End Container-->
         </nav>
         <!--Navbar End-->
-    </header>    
-
+    </header>
     <!--Jumbotron-->
     <div class="jumbotron">
         <div class="container text-center">
@@ -155,11 +172,23 @@
         </div>
     </div>
     <!--End Container-->
-
+   
     <!-- JQuery -->
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 
     <!-- Latest compiled and minified JavaScript --><script src="js/bootstrap.min.js"></script>﻿
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>  
+    <script type="text/javascript">                                         
+      $(document).ready(function() {
+        $('a').hover(
+          function () {
+            $(this).parent('li').find('.description').show();
+          }, 
+          function () {
+            $(this).parent('li').find('.description').hide();
+          }
+       );
+      }); 
+    </script>
 </body> 
 </html>
