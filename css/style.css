@@ -14,7 +14,8 @@ header .navbar{
 }
 
 .navbar-brand{
-
+	max-width: 170px;
+	max-height: 170px;
 	margin-bottom: 0;
 	display: inline;
 	float: left;
@@ -25,18 +26,25 @@ header .navbar{
 }
 
 .navbar-brand img{
-	max-width: 140px;
-	max-height: 140px;
+	max-width: 170px;
+	max-height: 170px;
 	display: inline;
 	float: left;
 }
 
 .jumbotron{
-	height: 500px;
+	height: 650px;
 	background: #484848;
 	color: #fff;
 	margin-bottom: 0px;
 	padding: 0;
+}
+
+.jumbotron-image{
+	background-image: url('../images/wallpaper-digital-art-cubes-deviantart-abstract-multicolor-design-images-wallwuzz-hd-wallpaper-10410-e1424766918941.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center; 
 }
 
 .jumbotron .container h1{
@@ -46,25 +54,50 @@ header .navbar{
 }
 
 .jumbotron .container p{
-	line-height: 300%;
+	transform: translate(0,-30px);
+}
+
+.jumbotron-sm { 
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
+
+.h1 small {
+font-size: 24px;
 }
 
 #navbar-collapse{
 	overflow: visible;
 }
 
-.services{
+.services .container-fluid{
 	margin: 0;
 	border: 0px;
 	padding: 0;
 	background: #585858;
+	color: #fff;
+}
+
+.services .container-fluid .carousel-inner img{
+	width: 600px;
+	height: 450px;
+	background: none;
 }
 
 .about{
 	margin: 0;
 	border: 0px;
 	padding: 0;
+	background: #383838;
+	color: #fff;
+}
+
+.contact{
+	margin: 0;
+	border: 0px;
+	padding: 0;
 	background: #484848;
+	color: #fff;
 }
 
 .login{
@@ -73,4 +106,48 @@ header .navbar{
 
 .register{
 	transform: translate(0, 50px);
+}
+
+.center {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
+
+.footer {
+    background: #282828 none repeat scroll 0 0;
+    margin: 0;
+    padding: 20px 0;
+}
+.footer_dv {
+    width: 100%;
+}
+.footer_dv h4 {
+    color: #fcab0e;
+    font-family: roboto;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+.footer_dv ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.footer_dv ul li:first-child {
+    border-top: medium none;
+    box-shadow: none;
+}
+.footer_dv ul li {
+    border-top: 1px solid #000;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.2);
+    color: #f1f2f2;
+    padding: 5px 0;
+}
+.footer_dv p {
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 0 15px;
+    text-align: justify;
 }
