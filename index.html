@@ -51,49 +51,49 @@
                                <li class="dropdown-header"></li>
 
                                <li>
-                                <a class="page-scroll trigger" href="#offset">Offset Printing</a>
+                                <a class="page-scroll trigger service-nav" data-panelId="#offset" href="#offset">Offset Printing</a>
                                </li>
 
                                <li class="divider"></li>
 
                                <li>
-                                <a class="page-scroll trigger" href="#graphic">Graphic Designing</span></a>
+                                <a class="page-scroll trigger service-nav" data-panelId="#graphic" href="#graphic">Graphic Designing</span></a>
                                </li>
 
                                <li class="divider"></li>
 
                                <li>
-                                <a class="page-scroll trigger" href="#digital">Digital Printing</a>
+                                <a class="page-scroll trigger service-nav" data-panelId="#digital" href="#digital">Digital Printing</a>
                                </li>
 
                                <li class="divider"></li>
 
                                <li>
-                                <a class="page-scroll trigger" href="#bcards">Business Cards</a>
+                                <a class="page-scroll trigger service-nav" data-panelId="#bcards" href="#bcards">Business Cards</a>
                                </li>
 
                                <li class="divider"></li>
 
                                <li>
-                                <a class="page-scroll trigger" href="#flex">Flex Printing</a>
+                                <a class="page-scroll trigger service-nav" data-panelId="#flex" href="#flex">Flex Printing</a>
                                </li>
 
                                <li class="divider"></li>
 
                                <li>
-                                <a class="page-scroll trigger" href="#magazine">Magazine Printing</a>
+                                <a class="page-scroll trigger service-nav" data-panelId="#magazine" href="#magazine">Magazine Printing</a>
                                </li>
 
                                <li class="divider"></li>
 
                                <li>
-                                <a class="page-scroll trigger" href="#spot">Spot UV</a>
+                                <a class="page-scroll trigger service-nav" data-panelId="#spot" href="#spot">Spot UV</a>
                                </li>
 
                                <li class="divider"></li>
 
                                <li>
-                                <a class="page-scroll trigger" href="#lamination">Lamination and Binding</a>
+                                <a class="page-scroll trigger service-nav" data-panelId="#lamination" href="#lamination">Lamination and Binding</a>
                                </li>
                           </ul>  
                         </li>
@@ -221,7 +221,7 @@
 
     <!--Container-->
     <div class="description">
-        <div class="container-fluid" id="offset">
+        <div class="container-fluid hidden" id="offset">
             <section>
                 <div class="page-header col-md-12">
                     <h2>Offset Printing</h2>
@@ -234,7 +234,7 @@
             </section>
         </div>
 
-        <div class="container-fluid" id="graphic">
+        <div class="container-fluid hidden" id="graphic">
             <section>
                 <div class="page-header col-md-12">
                     <h2>Graphic Designing</h2>
@@ -247,7 +247,7 @@
             </section>
         </div>
 
-        <div class="container-fluid" id="digital">
+        <div class="container-fluid hidden" id="digital">
             <section>
                 <div class="page-header col-md-12">
                     <h2>Digital Printing</h2>
@@ -260,7 +260,7 @@
             </section>
         </div>
 
-        <div class="container-fluid" id="bcards">
+        <div class="container-fluid hidden" id="bcards">
             <section>
                 <div class="page-header col-md-12">
                     <h2>Business Cards</h2>
@@ -273,7 +273,7 @@
             </section>
         </div>
 
-        <div class="container-fluid" id="flex">
+        <div class="container-fluid hidden" id="flex">
             <section>
                 <div class="page-header col-md-12">
                     <h2>Flex Printing</h2>
@@ -286,7 +286,7 @@
             </section>
         </div>
 
-        <div class="container-fluid" id="magazine">
+        <div class="container-fluid hidden" id="magazine">
             <section>
                 <div class="page-header col-md-12">
                     <h2>Magazine Printing</h2>
@@ -299,7 +299,7 @@
             </section>
         </div>
 
-        <div class="container-fluid" id="spot">
+        <div class="container-fluid hidden" id="spot">
             <section>
                 <div class="page-header col-md-12">
                     <h2>Spot UV</h2>
@@ -312,7 +312,7 @@
             </section>
         </div>
 
-        <div class="container-fluid" id="lamination">
+        <div class="container-fluid hidden" id="lamination">
             <section>
                 <div class="page-header col-md-12">
                     <h2>Lamination and Binding</h2>
@@ -450,18 +450,19 @@
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 
     <!-- Latest compiled and minified JavaScript --><script src="js/bootstrap.min.js"></script>﻿
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>  
-    <script type="text/javascript">                                         
-      $(document).ready(function() {
-        $('a').hover(
-          function () {
-            $(this).parent('li').find('.description').show();
-          }, 
-          function () {
-            $(this).parent('li').find('.description').hide();
-          }
-       );
-      }); 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <!-- Custom Script-->
+    <script type="text/javascript" src="js/custom.js"></script>
+
+    <!-- Custom JQuery-->
+    <script type="text/javascript">
+        $(function(){
+            $('.service-nav').on('click', function(){
+                var panelId = $(this).attr('data-panelId');
+                $(panelId).removeClass('hidden');
+            });
+        });
     </script>
 </body> 
 </html>
