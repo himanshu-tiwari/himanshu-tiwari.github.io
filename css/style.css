@@ -9,39 +9,71 @@ body {
 header .navbar{
 	background: #282828;
 	color: #fff;
-	overflow: visible;
 	border: none;
 }
 
 .navbar-brand{
-	max-width: 170px;
-	max-height: 170px;
+	width: 170px;
+	height: 80px;
 	margin-bottom: 0;
-	display: inline;
 	float: left;
 }
 
-.after-navabar-brand{
-	clear:left;
-}
 
 .navbar-brand img{
-	max-width: 170px;
-	max-height: 170px;
-	display: inline;
+	max-width: 340px;
+	max-height: 340px;
 	float: left;
 }
 
-.dropdown-menu .sub-menu {
-    top: 70%;
+.dropdown-submenu {
     position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
     top: 0;
-    display:none;
-    margin-top: -1px;
-	border-top-left-radius:0;
-	border-bottom-left-radius:0;
-	border-left-color:#fff;
-	box-shadow:none;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+    overflow: scroll;
+    max-height: 250px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
 }
 
 .jumbotron{
@@ -53,7 +85,7 @@ header .navbar{
 }
 
 .jumbotron-image{
-	background-image: url('../images/wallpaper-digital-art-cubes-deviantart-abstract-multicolor-design-images-wallwuzz-hd-wallpaper-10410-e1424766918941.jpg');
+	background-image: url('../images/back.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center; 
@@ -91,8 +123,7 @@ font-size: 24px;
 }
 
 .services .container-fluid .carousel-inner img{
-	width: 600px;
-	height: 450px;
+
 	background: none;
 }
 
@@ -170,4 +201,23 @@ font-size: 24px;
     line-height: 20px;
     margin: 0 0 15px;
     text-align: justify;
+}
+
+nav .navbar-toggle {
+  margin: 13px 15px 13px 0;
+}
+
+
+
+nav.navbar.shrink{
+  max-height: 40px;
+}
+
+nav.navbar.shrink img{
+  max-height: 35px;
+}
+
+nav.shrink .navbar-toggle {
+  padding: 4px 5px;
+  margin: 8px 15px 8px 0;
 }
