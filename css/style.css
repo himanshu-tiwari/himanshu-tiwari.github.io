@@ -7,23 +7,25 @@ body {
 }
 
 header .navbar{
-	background: #282828;
-	color: #fff;
+	background: #000;
+	color: #000;
 	border: none;
 }
 
 .navbar-brand{
 	width: 170px;
-	height: 80px;
+	height: 60px;
 	margin-bottom: 0;
 	float: left;
 }
 
 
 .navbar-brand img{
-	max-width: 340px;
-	max-height: 340px;
+	max-width: 170px;
+	max-height: 170px;
 	float: left;
+    transform: translateY(-7px);
+
 }
 
 .dropdown-submenu {
@@ -123,8 +125,21 @@ font-size: 24px;
 }
 
 .services .container-fluid .carousel-inner img{
-
+    height: 100%
+    width:  100%;
 	background: none;
+}
+
+#carousel{
+    background: #383838;
+}
+
+#carousel ul li{
+    background: #383838;
+}
+
+.dot-nav{
+    background: #383838;
 }
 
 .description{
@@ -211,6 +226,7 @@ nav .navbar-toggle {
 
 nav.navbar.shrink{
   max-height: 40px;
+  background: #282828;
 }
 
 nav.navbar.shrink img{

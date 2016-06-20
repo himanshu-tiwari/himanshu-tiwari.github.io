@@ -1,0 +1,86 @@
+/* carousel container */
+#carousel {
+  font-family: 'Raleway', sans-serif;
+  background-size: cover;
+}
+
+/* carousel slides */
+#carousel ul {
+  padding: 0px;
+  list-style-type: none;
+  height: 450px; /* set height for carousel */
+  position: relative;
+}
+
+#carousel ul li {
+  display: none;
+}
+
+#carousel ul li.active {
+  display: block;
+}
+
+#carousel ul li p {
+  font-size: 2em;
+  opacity: .85;
+  color: cornsilk;
+  position: absolute;
+}
+
+/* content positioning classes */
+p.full-width {
+  left: 0;
+  right: 0;
+}
+
+p.top {
+  top: 0;
+}
+
+p.bottom {
+  bottom: 0;
+}
+
+p.left {
+  left: 0;
+}
+
+p.right {
+  right: 0;
+}
+
+/* dot navigation styles */
+ul.dot-nav {
+  background: #383838;
+  padding: 0px;
+  list-style-type: none;
+  text-align: center;
+}
+
+ul.dot-nav li {
+  background: #383838; /* to change dot color */
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+ul.dot-nav li:hover, ul.dot-nav li.active {
+  background: #383838; /* to change dot color */
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+/* mobile */
+@media all and (max-width: 600px) {
+  p.top, p.bottom, p.left, p.right {
+    left: 0;
+    right: 0;
+  } 
+}
+
+
+
+
+
+
