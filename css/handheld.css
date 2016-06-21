@@ -1,0 +1,7 @@
+.navbar-brand img{
+	max-width: 220px;
+	max-height: 140px;
+	float: left;
+    transform: translateY(-20px);
+
+}
