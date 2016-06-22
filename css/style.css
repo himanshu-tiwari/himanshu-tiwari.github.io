@@ -1,5 +1,10 @@
+@font-face {
+   font-family: myFontRoboto;
+   src: url(./../fonts/Roboto-Bold.ttf);
+}
 body {
     font-family: 'Lato';
+    background-color: #fff;
 }
 
 .fa-btn {
@@ -7,9 +12,9 @@ body {
 }
 
 header .navbar{
-	background: #000;
-	color: #000;
-	border: none;
+    background: #000;
+    color: #000;
+    border: none;
 }
 
 #navbar-collapse{
@@ -17,7 +22,7 @@ header .navbar{
 }
 
 .navbar-brand{
-	max-width: 340px;
+    max-width: 340px;
     max-height: 140px;
     margin-bottom: 0;
     float: left;
@@ -25,9 +30,9 @@ header .navbar{
 
 
 .navbar-brand img{
-	max-width: 220px;
-	max-height: 140px;
-	float: left;
+    max-width: 220px;
+    max-height: 140px;
+    float: left;
     transform: translateY(-7px);
 
 }
@@ -113,33 +118,33 @@ body {
 }
 
 .jumbotron{
-	height: 650px;
-	background: #484848;
-	color: #fff;
-	margin-bottom: 0px;
-	padding: 0;
+    height: 650px;
+    background: #484848;
+    color: #fff;
+    margin-bottom: 0px;
+    padding: 0;
 }
 
 .jumbotron-image{
-	background-image: url('../images/back.png');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center; 
+    background-image: url('../images/back.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
 }
 
 .jumbotron .container h1{
-	margin-top: 100px;
-	font-weight: bold;
-	line-height: 250%;
+    margin-top: 100px;
+    font-weight: bold;
+    line-height: 250%;
 }
 
 .jumbotron .container p{
-	transform: translate(0,-30px);
+    transform: translate(0,-30px);
 }
 
 .jumbotron-sm { 
-	padding-top: 24px;
-	padding-bottom: 24px;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .h1 small {
@@ -147,25 +152,26 @@ font-size: 24px;
 }
 
 .services .container-fluid{
-	margin: 0;
-	border: 0px;
-	padding: 0;
-	background: #383838;
-	color: #fff;
+    margin: 0;
+    border: 0px;
+    padding: 0;
+    background: #fff;
+    color: #000;
+    font-family: myFontRoboto;
 }
 
 .services .container-fluid .carousel-inner img{
     max-height: 600px;
     width:  100%;
-	background: none;
+    background: none;
 }
 
 .description{
-	margin: 0;
-	border: 0px;
-	padding: 0;
-	background: #383838;
-	color: #fff;
+    margin: 0;
+    border: 0px;
+    padding: 0;
+    background: #383838;
+    color: #fff;
     float: left;
 }
 
@@ -175,19 +181,23 @@ font-size: 24px;
 }
 
 .about{
-	margin: 0;
-	border: 0px;
-	padding: 0;
-	background: #383838;
-	color: #fff;
+    margin: 0;
+    border: 0px;
+    padding: 0;
+    background: #1c8cb5;
+    color: #fff;
+    font-family: myFontRoboto;
 }
 
+
+
 .contact{
+    font-family: myFontRoboto;
 	margin: 0;
 	border: 0px;
 	padding: 0;
-	background: #383838;
-	color: #fff;
+	background: #fff;
+	color: #000;
 }
 
 .login{
@@ -205,9 +215,10 @@ font-size: 24px;
 }
 
 .footer {
-    background: #282828 none repeat scroll 0 0;
+    background: #000 none repeat scroll 0 0;
     margin: 0;
     padding: 20px 0;
+    font-family: myFontRoboto;
 }
 .footer_dv {
     width: 100%;
