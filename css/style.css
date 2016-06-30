@@ -46,7 +46,7 @@ nav .navbar-toggle {
 
 nav.navbar.shrink{
   max-height: 40px;
-  background: #282828;
+  background: #1c8cb5;
 }
 
 nav.navbar.shrink img{
@@ -119,26 +119,28 @@ body {
 
 .jumbotron{
     height: 650px;
-    background: #484848;
+    background: #fff;
     color: #fff;
     margin-bottom: 0px;
     padding: 0;
 }
 
 .jumbotron-image{
-    background-image: url('../images/back.png');
+    background-image: url('http://previews.123rf.com/images/jameschipper/jameschipper1310/jameschipper131000015/22964407-a-splash-cmyk-line-arrow-line-background-Stock-Vector.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 
 }
 
 .jumbotron .container h1{
+    color: #000;
     margin-top: 100px;
     font-weight: bold;
     line-height: 250%;
 }
 
 .jumbotron .container p{
+    color: #000;
     transform: translate(0,-30px);
 }
 
@@ -215,7 +217,7 @@ font-size: 24px;
 }
 
 .footer {
-    background: #000 none repeat scroll 0 0;
+    background: #1c8cb5 none repeat scroll 0 0;
     margin: 0;
     padding: 20px 0;
     font-family: myFontRoboto;
@@ -224,7 +226,7 @@ font-size: 24px;
     width: 100%;
 }
 .footer_dv h4 {
-    color: #fcab0e;
+    color: #000;
     font-family: roboto;
     font-weight: bold;
     margin-bottom: 30px;
@@ -244,6 +246,9 @@ font-size: 24px;
     box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.2);
     color: #f1f2f2;
     padding: 5px 0;
+}
+.footer_dv ul li a{
+    color: #fff;
 }
 .footer_dv p {
     color: #fff;
