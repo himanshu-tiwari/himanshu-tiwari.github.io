@@ -72,12 +72,6 @@
                                <li class="divider"></li>
 
                                <li>
-                                <a class="page-scroll trigger service-nav" data-panelId="#bcards" href="#bcards">Business Cards</a>
-                               </li>
-
-                               <li class="divider"></li>
-
-                               <li>
                                 <a class="page-scroll trigger service-nav" data-panelId="#flex" href="#flex">Flex Printing</a>
                                </li>
 
@@ -101,7 +95,7 @@
 
                                <li class="divider"></li>
 
-                               <li class="prod-footer"><a href="#products">Click for more Products and services...</a></li>
+                               <li class="prod-footer"><a href="#products">More Products and services...</a></li>
                           </ul>  
                         </li>
                         <li><a class="page-scroll" href="#about">About Us</a></li>
@@ -652,21 +646,25 @@
                         <div class="footer_dv">
                             <h4 class="footer-headings">Services</h4>
                             <ul>
-                               <li><a href="#services">Offset Printing</a></li>
-                               <li><a href="#services">Graphic Designing</a></li>
-                               <li><a href="#services">Digital Printing</a></li>
-                               <li><a href="#services">Book Printing</a></li>
+                               <li><a href="#offset">Offset Printing</a></li>
+                               <li><a href="#graphic">Graphic Designing</a></li>
+                               <li><a href="#digital">Digital Printing</a></li>
+                               <li><a href="#magazine">Book Printing</a></li>
+
+                               <li class="show-service hidden"><a href="#magazine">Magazine Printing</a></li>
+                               <li class="show-service hidden"><a href="#spot">Spot UV</a></li>
+                               <li class="show-service hidden"><a href="#lamination">Lamination and Binding</a></li>
                             </ul>
                         </div>
                     </div>
                             
-                    <div class="col-lg-3  col-md-3 col-sm-3">
+                    <div class="col-lg-3  col-md-3 col-sm-3 hide-service">
                         <div class="footer_dv">
                             <h4 class="footer-headings">Services</h4>
                             <ul>
-                               <li><a href="#services">Magazine Printing</a></li>
-                               <li><a href="#services">Spot UV</a></li>
-                               <li><a href="#services">Lamination and Binding</a></li>
+                               <li><a href="#magazine">Magazine Printing</a></li>
+                               <li><a href="#spot">Spot UV</a></li>
+                               <li><a href="#lamination">Lamination and Binding</a></li>
                                <li class="prod-footer"><a href="#products">Click for more Products and services...</a></li>
                             </ul>
                         </div>
@@ -675,23 +673,23 @@
                         <div class="footer_dv">
                             <h4 class="footer-headings">Other Products and Services</h4>
                             <ul>
-                               <li><a href="#services">Business Cards</a></li>
-                               <li><a href="#services">Mug Printing</a></li>
+                               <li><a href="#bcards">Business Cards</a></li>
+                               <li><a href="#mug">Mug Printing</a></li>
                                <li><a href="#services">Official Tent and Pla Cards</a></li>
-                               <li><a href="#services">Catalog Printing</a></li>
-                               <li><a href="#services">Diary Printing</a></li>
-                               <li><a href="#services">Calendar Printing</a></li>
-                               <li><a href="#services">Brochure Printing</a></li>
-                               <li><a href="#services">Poster Printing</a></li>
-                               <li><a href="#services">Book Printing and Binding</a></li>
-                               <li><a href="#services">Tags</a></li>
-                               <li><a href="#services">Hang Tags</a></li>
-                               <li><a href="#services">Flyers</a></li>
-                               <li><a href="#services">Invitation Cards</a></li>
-                               <li><a href="#services">Labels</a></li>
-                               <li><a href="#services">Stickers</a></li>
-                               <li><a href="#services">T-Shirt Printing</a></li>
-                               <li><a href="#services">Custom Printed Stationary Items</a></li>
+                               <li><a href="#catalog">Catalog Printing</a></li>
+                               <li><a href="#diary">Diary Printing</a></li>
+                               <li><a href="#calendar">Calendar Printing</a></li>
+                               <li><a href="#brochure">Brochure Printing</a></li>
+                               <li><a href="#poster">Poster Printing</a></li>
+                               <li><a href="#lamination">Book Printing and Binding</a></li>
+                               <li><a href="#tags">Tags</a></li>
+                               <li><a href="#htags">Hang Tags</a></li>
+                               <li><a href="#flyers">Flyers</a></li>
+                               <li><a href="#cards">Invitation Cards</a></li>
+                               <li><a href="#labels">Labels</a></li>
+                               <li><a href="#stickers">Stickers</a></li>
+                               <li><a href="#tshirt">T-Shirt Printing</a></li>
+                               <li><a href="#stationary">Customised Printed Stationary Items</a></li>
                             </ul>
                         </div>
                     </div>
@@ -733,12 +731,8 @@
         $(function(){
             $('.prod-footer').on('click', function(){
                 $("#products").removeClass('hidden');
-            });
-        });
-
-        $(function(){
-            $('.prod-footer').on('click', function(){
-                $("#products").removeClass('hidden');
+                $(".hide-service").addClass('hidden');
+                $(".show-service").removeClass('hidden');
             });
         });
 
