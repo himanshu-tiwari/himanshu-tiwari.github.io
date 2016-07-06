@@ -72,10 +72,12 @@ body {
 }
 
 .jumbotron-image{
-    background-image: url('http://previews.123rf.com/images/jameschipper/jameschipper1310/jameschipper131000015/22964407-a-splash-cmyk-line-arrow-line-background-Stock-Vector.jpg');
+    /*background-image: url('http://previews.123rf.com/images/jameschipper/jameschipper1310/jameschipper131000015/22964407-a-splash-cmyk-line-arrow-line-background-Stock-Vector.jpg');*/
+     background-image: linear-gradient(to bottom, rgba(155, 0, 0, 0.2) 0%, rgba(155, 0, 0, 0.2) 1%), url(http://previews.123rf.com/images/jameschipper/jameschipper1310/jameschipper131000015/22964407-a-splash-cmyk-line-arrow-line-background-Stock-Vector.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 
+    opacity: 0.7;
 }
 
 .jumbotron .container h1{
@@ -199,4 +201,39 @@ html body #map {
     line-height: 20px;
     margin: 0 0 15px;
     text-align: justify;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color : #060606;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+    color : #605555;
+}
+.z {
+    z-index: 999;
+}
+.hero-heading {
+margin-top: 150px !important;
+font-family: 'Suez One', serif;
+font-size: 48px;
+letter-spacing: 4px;
+line-height:90% !important;
+margin-bottom: 60px;
+
+
+}
+.hero-sub {
+
+    border-top : 1px solid black;
+   font-family: 'Suez One', serif; 
+   font-size: 24px;
+   font-weight: 200; 
+   letter-spacing: 4px;
+    border-bottom : 1px solid black;
+}
+.list  {
+    font-family: 'Suez One', serif; 
+}
+.heading {
+     font-family: 'Suez One', serif; 
+     font-size: 26px;
 }
