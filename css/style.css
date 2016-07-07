@@ -235,3 +235,8 @@ margin-bottom: 60px;
      font-family: 'Suez One', serif; 
      font-size: 26px;
 }
+.text {
+    font-family: 'Suez One', serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
