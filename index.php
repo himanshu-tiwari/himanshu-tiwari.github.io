@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+
+$errors = isset($_SESSION['errors']) ? $_SESSION['errors'] : [];
+$fields = isset($_SESSION['fields']) ? $_SESSION['fields'] : [];
+
+require_once 'helpers/security.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -516,61 +527,6 @@
     </div>
     <!--End Container-->
 
-<?php
-  // ------------- BEGIN OF CUSTOMIZABLE INFO ------------------
-  // email of the person receiving the contact form (your email)
-  $to = 'your_email@gmail.com';
-  // your site url (for info in the email)
-  $site_url = 'http://mysite.com';
-  $form_email_label = "Your email:";
-  $form_message_label = "Your message:";
-  $form_submit_label = "Send";
-  $attack_detected = "Sending information to administrator";
-  $missing_from =    "Please provide an email address";
-  $invalid_from =    "Please provide a valid email address - like something@something.com";
-  $missing_message = "Please insert some text in the message";
-  $could_not_send =  "There was a problem while sending the email. Please try again a bit later.";
-  // ------------- END OF CUSTOMIZABLE INFO ------------------
-  $from_errors = array();
-  $message_errors = array();
-  $sending_error = array();
-  function cleanEmail($email) {
-    return trim(strip_tags($email));
-  }
-  function validEmail($email) {
-    $pattern = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i";
-    return preg_match($pattern, cleanEmail($email));
-  }
-  function verifyFrom($from){
-    if(empty($from))       { array_push($from_errors, $missing_from); }
-    if(!validEmail($from)) { array_push($from_errors, $invalid_from); }
-    return count($from_errors) == 0;
-  }
-  function verifyMessage($message) {
-    if(empty($message))    { array_push($message_errors, $missing_message); }
-    return count($message_errors) == 0;
-  }
-  if($_POST) {
-    $from = $_POST['from'];
-    $message = $_POST['message'];
-    if (verifyFrom($from) && verifyMessage($message)) {
-      $cleanFrom = cleanEmail($from);
-      $subject = 'Contact - '. $site_url;
-      $headers = "From: " . $cleanFrom . "\r\n";
-      $headers .= "Reply-To: ". $cleanFrom . "\r\n";
-      $headers .= "MIME-Version: 1.0\r\n";
-      $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-      if (mail($to, $subject, $message, $headers)) {
-        header('Location: thanks.html');
-        die();
-      } else {
-        array_push($sending_errors, $could_not_send);
-      }
-    }
-  }
-?>
-
-
     <!--Contact Us-->
     <div class="contact">
         <div class="container" id="contact">
@@ -578,26 +534,39 @@
                 <div class="page-header col-md-12">
                     <h2 class="heading">Contact us</h2>
                 </div>
+
+                <?php if(!empty($errors)): ?>
+                    <div class="panel">
+                        <ul>
+                            <li><?php echo implode('</li><li>', $errors);?></li>
+                        </ul>
+                    </div>
+                <?php endif; ?>
+
                 <div class="container text-center">
-                    <form action="{{ url('/home/mail') }}" method="post">
+                    <form action="contact.php" method="post">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="name">
-                                        Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
+                                        Name
+                                    </label>
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Enter name" required="required"  autocomplete="off" <?php echo isset($fields['name']) ? ' value="' .e($fields['name']). '" ' : ''  ?>/>
                                 </div>
                                 <div class="form-group">
                                     <label for="email">
-                                        Email Address</label>
+                                        Email Address
+                                    </label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
                                         </span>
-                                        <input type="email" class="form-control" id="email" placeholder="Enter email" required="required" /></div>
+                                        <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" required="required" autocomplete="off" <?php echo isset($fields['email']) ? ' value="' .e($fields['email']). '" ' : ''  ?>/>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="subject">
-                                        Subject</label>
+                                        Subject
+                                    </label>
                                     <select id="subject" name="subject" class="form-control" required="required">
                                         <option value="na" selected="">Choose One:</option>
                                         <option value="service">General Customer Service</option>
@@ -608,10 +577,13 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="name">
-                                        Message</label>
+                                    <label for="message">
+                                        Message
+                                    </label>
                                     <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
-                                        placeholder="Message"></textarea>
+                                        placeholder="Message">
+                                        <?php echo isset($fields['message']) ? e($fields['message']) : ''  ?>
+                                    </textarea>
                                 </div>
                             </div>
                             <div class="col-md-12">
@@ -766,3 +738,10 @@
 
 </body> 
 </html>
+
+<?php
+
+unset($_SESSION['errors']);
+unset($_SESSION['fields']);
+
+?>
